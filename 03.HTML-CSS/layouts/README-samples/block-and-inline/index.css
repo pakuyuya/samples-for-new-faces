@@ -1,0 +1,27 @@
+div {
+  padding : 10px;
+  margin : 10px;
+}
+
+p {
+  line-height : 175%;
+  padding : 10px;
+  margin : 10px;
+}
+
+.c-border {
+  border : solid 1px #000;
+}
+.c-border-gray {
+  border : solid 1px #aaa;
+}
+
+.c-flex {
+  display: flex;
+}
+.c-flex-item {
+  width : 100px;
+}
+.c-inline-block {
+  display: inline-block;
+}

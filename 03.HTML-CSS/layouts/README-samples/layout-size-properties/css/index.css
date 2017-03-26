@@ -1,0 +1,19 @@
+
+
+.c-box {
+    /** border-widthも height、widthの中に含める。 */
+    box-sizing: border-box;
+
+    width : 300px;
+    height : 200px;
+
+    border : solid 15px #f93;
+    padding : 30px;
+    margin : 30px;
+
+    line-height : 35px;
+}
+
+.c-border {
+  border: solid 1px #000;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>レイアウトサンプル</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h2>ブロック要素とインライン要素</h2>
+
+    <p>HTMLでレイアウトを組むにあたって、基本となる「ブロック要素」と「インライン要素」の性質を理解する。</p>
+
+    <h3>ブロック要素</h3>
+
+    <p>名前から何となく察せる気がするが、以下のようなルールがある。</p>
+
+    <div class="c-border">
+      CSSの指定がない限り、横幅いっぱいをとる性質がある。
+    </div>
+    <div class="c-border">
+      ２つ並べると、改行される。
+    </div>
+    <div class="c-border" style="width:30%;">
+      デフォルトでは、幅を狭めたものを複数並べても横に並ぶことはない。
+    </div>
+    <div class="c-border" style="width:30%;">
+      あくまで、１行に１ブロックである。
+    </div>
+    <div class="c-border">
+      <div class="c-border">
+        ブロック要素の中にブロック要素を配置できる。
+      </div>
+      <div class="c-border">
+        これは、レイアウトの基礎になるのでぜひ覚えてほしい。
+      </div>
+      <p class="c-border">
+        ただし、例外となる要素がいくつかある。例えば、pタグの中に<div class="c-border">ブロック要素（など）を指定すると、</div>指定した直前でpタグが一旦終ってしまう。
+      </p>
+    </div>
+  
+    <h3>インライン要素</h3>
+    
+    <p>”ライン”とは、文章を書くときに延々続く行のようなものを指す。<br>作文で使ったあの方眼紙で、右上から下まで続いて次の行頭にいってまた続くあの行を想像してほしい。</p>
+    <p>インライン要素には、spanタグ、aタグ、iタグなどの装飾タグや、<br>今ここに書いている文字の塊（W3Cの既定でText-nodeという）、<br>テキストブロックやボタンなどのコントロール、画像が含まれる。</p>
+    <p class="c-border-gray" style="width:50%">
+      <span class="c-border">
+        基本的に２種類ある。このように、中にかこったコンテンツにまとわりつくよう囲むもの。<br>
+        このタイプは、途中で改行があると、次の行頭まで”ワープ”するように折り返す。
+      </span>
+    </p>
+    <p class="c-border-gray">
+      文字を含めた、様々なコンテンツのようなもの。（以下、例）<br>
+      <input type="text" name="ctla" value="テキストブロック">
+      <input type="radio" name="ctlb" value="">ラジオボタン
+      <button type="button">ボタン</button>
+      <img src="xxx">画像
+    </p>
+    <p class="c-border-gray" style="width:50%;">
+      <span class="c-border">インライン要素は共通して、複数並べるとその続きに並ぼうとする。</span><span class="c-border">行の端に到達したとき、だいたいの要素のデフォルトの動作は、次の行に改行しようとする。</span>
+    </p>
+    <div class="c-border-gray">
+     <span class="c-border">
+        もう一つ、インラインはその名の通り共通のラインの中にあり
+      </span>
+      <span class="c-border" style="font-size: 34px;">大きいインライン要素は</span>
+      <span class="c-border">共通のラインの高さを押し上げる。</span>
+    </div>
+    <h3>例外の要素</h3>
+    <p>いくつか例外がある。</p>
+    <table border="1">
+      <tr>
+        <td>ひとつはテーブル要素。</td>
+        <td>これらは、タグひとつひとつが特殊な扱いとなっている。</td>
+      </tr>
+    </table>
+    
+    <div class="c-flex c-border">
+      <div class="c-border" style="width:150px;">
+        CSSの「display」プロパティは、インライン要素・ブロック要素などを任意に書き換えることができ、また、一部はどちらの要素にも属さない。
+      </div>
+      <div class="c-border" style="width:150px;">
+        今このサンプルにあるのが display: flex; を指定したもの。
+      </div>
+      <div class="c-border" style="width:150px;">
+        中に入ったすべてのブロック要素が、横並びになっている。
+      </div>
+    </div>
+
+    <div class="c-border">
+      <div class="c-border c-inline-block">
+         もう一つ、display: inline-blockも紹介する。
+      </div>
+      <div class="c-border c-inline-block">
+         ブロック要素であるが、インライン要素のように最小限の横幅にとどまり、<br>
+        かつ横に並ぼうとする。
+      </div>
+    </div>
+  </body>
+</html>
